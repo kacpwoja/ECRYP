@@ -36,10 +36,10 @@ def find_generators(modulus: int) -> []:
 def find_logarithm(number: int, base: int, modulus: int) -> []:
 	""" Task example:
 		Compute log5(8) in mult. group Z*13
-		(Searches in the first 50 powers - returns 0 if not found)
+		(returns 0 if not found)
 	"""
 	result = []
-	for i in range(1,50):
+	for i in range(1,modulus):
 		if (base**i)%modulus == number:
 			result.append(i)
 	return result
